@@ -4,11 +4,11 @@ var app = express.createServer(express.logger());
 
 
 app.get('/', function(request, response) {
-  var resultado = fs.readFile('index.html');
-  response.send(resultado.toString());
-
+  var resultado = fs.readFile('index.html','utf8');
+  response.send(resultado);
 
 });
+
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
