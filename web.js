@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   var resultado = fs.readFile('index.html');
-  response.send(resultado);
+  response.send(resultado.toString());
 
 
 });
